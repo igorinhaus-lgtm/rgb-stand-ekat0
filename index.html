@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Психолог Екатерина Зубова | Гештальт-терапия в Перми и онлайн. Бережная помощь в кризисах, отношениях, поиске себя. Первая консультация бесплатно.">
+    <meta name="keywords" content="психолог Пермь, гештальт-терапия, психолог Оса, психолог онлайн, консультация психолога">
+    <title>Екатерина Зубова | Психолог | Гештальт-терапия в Перми и онлайн</title>
+    <style>
+        :root {
+            --brick: #8B5A4B;
+            --brick-light: #A67B6B;
+            --cream: #FDF9F5;
+            --cream-dark: #F5EDE5;
+            --text: #3D2B1F;
+            --text-light: #6B5B4F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--cream);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(253, 249, 245, 0.96);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+        
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--brick);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--brick);
+        }
+        
+        .nav-cta {
+            background: var(--brick);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .nav-cta:hover {
+            background: var(--brick-light);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero with NEW background image */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('./uploads/bx8vsfufm9vkpqh6833oh098-bee1b10d.webp');
+            background-size: cover;
+            background-position: center;
+            filter: blur(2px) brightness(0.85) saturate(0.92);
+            z-index: 1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(139,90,75,0.82) 0%, rgba(139,90,75,0.72) 100%);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding: 140px 0 80px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.35rem;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.95);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--brick);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid white;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: var(--brick);
+        }
+        
+        .hero-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            z-index: 3;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Section */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: var(--brick);
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+        
+        /* About - без плашки */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-text {
+            padding: 20px 0;
+        }
+        
+        .about-text h3 {
+            color: var(--brick);
+            margin-bottom: 24px;
+            font-size: 1.7rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text);
+            font-size: 1.05rem;
+        }
+        
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Certificates - Horizontal Scroll */
+        .certificates {
+            background: white;
+            padding: 50px 30px;
+            border-radius: 24px;
+            margin: 0 20px;
+        }
+        
+        .cert-scroll {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 0 30px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--brick-light) #eee;
+        }
+        
+        .cert-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .cert-scroll::-webkit-scrollbar-thumb {
+            background: var(--brick-light);
+            border-radius: 4px;
+        }
+        
+        .cert-card {
+            min-width: 280px;
+            max-width: 280px;
+            background: var(--cream);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        
+        .cert-card:hover {
+            transform: translateY(-6px);
+        }
+        
+        .cert-card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .cert-info {
+            padding: 18px;
+        }
+        
+        .cert-info h4 {
+            font-size: 0.95rem;
+            color: var(--brick);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .cert-info p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        /* When to see psychologist */
+        .triggers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        
+        .trigger-card {
+            background: white;
+            padding: 32px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            border-left: 5px solid var(--brick);
+        }
+        
+        .trigger-card p {
+            margin: 0;
+            color: var(--text);
+            font-size: 1.02rem;
+        }
+        
+        .warning {
+            background: #FFF4E5;
+            border: 1px solid #E8A05B;
+            padding: 28px;
+            border-radius: 18px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .warning p {
+            margin: 0;
+            color: #8B5A00;
+            font-size: 1.05rem;
+        }
+        
+        /* Reviews - Horizontal Scroll */
+        .reviews-scroll {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 20px 0 40px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--brick-light) #eee;
+        }
+        
+        .reviews-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .reviews-scroll::-webkit-scrollbar-thumb {
+            background: var(--brick-light);
+            border-radius: 4px;
+        }
+        
+        .review-card {
+            min-width: 360px;
+            max-width: 360px;
+            background: white;
+            padding: 36px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            flex-shrink: 0;
+        }
+        
+        .review-text {
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 24px;
+            line-height: 1.75;
+            font-size: 1.02rem;
+        }
+        
+        .review-author {
+            font-weight: 600;
+            color: var(--brick);
+        }
+        
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        
+        .price-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .price-card.highlight {
+            border: 3px solid var(--brick);
+            position: relative;
+        }
+        
+        .price-card.highlight::before {
+            content: "Рекомендуем";
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--brick);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .price {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--brick);
+            margin: 20px 0;
+        }
+        
+        .price-label {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        .format-list {
+            text-align: left;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #eee;
+        }
+        
+        .format-list li {
+            margin-bottom: 10px;
+            padding-left: 8px;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: white;
+            margin-bottom: 12px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 24px 30px;
+            background: white;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--brick);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:hover {
+            background: var(--cream);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.8rem;
+            color: var(--brick-light);
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+        
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 30px 28px;
+            max-height: 300px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: #ccc;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .footer-col p, .footer-col a {
+            color: #aaa;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer-col a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        
+        /* Responsive */
+        <span style="color: hsl(var(--primary)); font-weight: 500;">@media</span> (max-width: 900px) {
+            .hero-content, .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .review-card, .cert-card {
+                min-width: 280px;
+            }
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Екатерина Зубова</a>
+                <ul class="nav-links">
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#certs">Квалификация</a></li>
+                    <li><a href="#when">Когда к психологу</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#pricing">Стоимость</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+                <a href="#contacts" class="nav-cta">Записаться бесплатно</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <h1>Психолог Екатерина Зубова</h1>
+                    <p class="subtitle">Гештальт-терапия • Пермь, Оса и онлайн<br>Бережная помощь в кризисах, отношениях и поиске себя</p>
+                    <div class="hero-buttons">
+                        <a href="#contacts" class="btn-primary">Записаться на бесплатную встречу</a>
+                        <a href="#about" class="btn-secondary">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="фото.png" alt="Екатерина Зубова — психолог, гештальт-терапевт">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About (без плашки) -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Здравствуйте! Меня зовут Екатерина Зубова</h3>
+                    <p>Профессионально занимаюсь психотерапией с 2019 года. Психология — это моё дело, моё увлечение и моя жизнь.</p>
+                    <p>Имею высшее психологическое образование по специальности «Психолог. Преподаватель психологии» (ПГПУ, 2008–2014). Замужем. Мама троих замечательных детей.</p>
+                    <p>Постоянно совершенствуюсь: закончила 2 ступени Московского Гештальт Института, регулярно посещаю супервизии, индивидуальную терапию и состою в профессиональном сообществе.</p>
+                    <p>Я здесь, чтобы помочь вам с самыми сокровенными, порой болезненными, но очень важными вопросами — в бережной и доверительной атмосфере.</p>
+                </div>
+                <div class="about-image">
+                    <img src="фото2.png" alt="Екатерина Зубова общение с природой">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certs" style="background: var(--cream-dark);">
+        <div class="container">
+            <h2 class="section-title">Моя квалификация и сертификаты</h2>
+            <p class="section-subtitle">Постоянное обучение и подтверждённая квалификация — залог качественной работы</p>
+            
+            <div class="certificates">
+                <div class="cert-scroll">
+                    <div class="cert-card">
+                        <img src="фото5.png" alt="Диплом психолога ПГПУ">
+                        <div class="cert-info">
+                            <h4>Диплом специалиста</h4>
+                            <p>ПГПУ, 2014 • Психолог, преподаватель психологии</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <img src="фото3.png" alt="Удостоверение о повышении квалификации">
+                        <div class="cert-info">
+                            <h4>Удостоверение о повышении квалификации</h4>
+                            <p>Пермский университет, 2023 • 72 часа</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <img src="фото4.png" alt="Сертификат МГИ 1 ступень">
+                        <div class="cert-info">
+                            <h4>Московский Гештальт Институт — 1 ступень</h4>
+                            <p>180 часов • 2020–2024</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <img src="фото8.png" alt="Сертификат Теория и практика гештальт-терапии">
+                        <div class="cert-info">
+                            <h4>Теория и практика гештальт-терапии</h4>
+                            <p>МГИ • 522 часа • 2022–2024</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <img src="фото6.png" alt="Сертификат Пермский гештальт-интенсив">
+                        <div class="cert-info">
+                            <h4>Пермский гештальт-интенсив «Мечта, переговоры, диалог»</h4>
+                            <p>15-й интенсив • 2024</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <img src="фото7.png" alt="Сертификат конференции">
+                        <div class="cert-info">
+                            <h4>XX Пермская конференция по гештальт-терапии</h4>
+                            <p>«Патология характера» • 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- When to see psychologist -->
+    <section id="when">
+        <div class="container">
+            <h2 class="section-title">Когда нужно идти к психологу</h2>
+            
+            <div class="triggers-grid">
+                <div class="trigger-card">
+                    <p>Если вдруг вы понимаете, что вроде бы всё хорошо, а радости и удовлетворения от жизни нет.</p>
+                </div>
+                <div class="trigger-card">
+                    <p>Если есть ощущение, что жизнь проходит мимо. «Я ничего не чувствую или не понимаю, что чувствую». «Не знаю, чего хочу на самом деле».</p>
+                </div>
+                <div class="trigger-card">
+                    <p>Если переживание обиды, горя, депрессивных настроений, тревоги и чувства вины мешают жить.</p>
+                </div>
+                <div class="trigger-card">
+                    <p>Если есть сложности в отношениях с партнёром: постоянные ссоры, невозможно договориться, в отношениях одиноко, думаете о разводе.</p>
+                </div>
+                <div class="trigger-card">
+                    <p>Если не удаётся выстраивать отношения с окружающими людьми.</p>
+                </div>
+                <div class="trigger-card">
+                    <p>Если переживаете одиночество, депрессию, кризисные состояния, потерю смысла жизни, горе, утрату.</p>
+                </div>
+            </div>
+            
+            <div class="warning">
+                <p><strong>Это повод сходить к психологу и не ждать, что «само пройдёт».</strong><br>Лучше в теплой, доверительной атмосфере поговорить о том, что вас волнует, и получить бережную обратную связь.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews - Horizontal Scroll -->
+    <section id="reviews" style="background: var(--cream-dark);">
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            
+            <div class="reviews-scroll">
+                <div class="review-card">
+                    <p class="review-text">«После нескольких встреч с Екатериной я наконец-то поняла, чего хочу от жизни. Она очень чуткая и внимательная, не давит, но помогает разобраться в себе.»</p>
+                    <p class="review-author">— Анна, 34 года</p>
+                </div>
+                <div class="review-card">
+                    <p class="review-text">«Обратилась в период тяжёлого развода. Екатерина помогла пережить этот кризис и не сломаться. Очень благодарна за поддержку и профессионализм.»</p>
+                    <p class="review-author">— Мария, 41 год</p>
+                </div>
+                <div class="review-card">
+                    <p class="review-text">«Работаем уже полгода. Екатерина помогла мне понять, почему я постоянно попадаю в токсичные отношения. Теперь я вижу паттерны и могу их менять.»</p>
+                    <p class="review-author">— Ольга, 29 лет</p>
+                </div>
+                <div class="review-card">
+                    <p class="review-text">«Пришла с чувством пустоты и бессмысленности. За несколько месяцев терапии вернулась радость жизни и появилось понимание, куда двигаться дальше.»</p>
+                    <p class="review-author">— Дмитрий, 38 лет</p>
+                </div>
+                <div class="review-card">
+                    <p class="review-text">«Екатерина очень бережно работает с детскими травмами. Я наконец-то смогла простить себя и отпустить прошлое. Спасибо огромное.»</p>
+                    <p class="review-author">— Светлана, 45 лет</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title">Стоимость и формат работы</h2>
+            
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Первая встреча</h3>
+                    <div class="price">Бесплатно</div>
+                    <p class="price-label">30 минут</p>
+                    <div class="format-list">
+                        <p>Знакомство, ваши вопросы, понимание, подхожу ли я вам как психолог.</p>
+                    </div>
+                </div>
+                
+                <div class="price-card highlight">
+                    <h3>Индивидуальная сессия</h3>
+                    <div class="price">от 3 000 ₽</div>
+                    <p class="price-label">50–60 минут</p>
+                    <div class="format-list">
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✓ Онлайн (Zoom, Google Meet)</li>
+                            <li>✓ Очно — г. Оса, ул. М. Горького, 93</li>
+                            <li>✓ Индивидуальный подход к каждому клиенту</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="price-card">
+                    <h3>Работа с детьми и подростками</h3>
+                    <div class="price">от 3 000 ₽</div>
+                    <p class="price-label">от 7 лет</p>
+                    <div class="format-list">
+                        <p>Работаю с детьми и подростками по запросам родителей и личным запросам ребёнка.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 40px; color: var(--text-light);">
+                Работаю в соответствии с профессиональным этическим кодексом.<br>
+                <strong>Полная конфиденциальность гарантируется.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="background: var(--cream-dark);">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">Сколько длится терапия?</button>
+                <div class="faq-answer">
+                    <p>Всё индивидуально. Кто-то приходит на 5–7 встреч, чтобы разобраться в конкретной ситуации. Кому-то требуется более длительная работа — от нескольких месяцев до года. На первой встрече мы обсудим ваш запрос и определим ориентировочные сроки.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">Можно ли работать онлайн?</button>
+                <div class="faq-answer">
+                    <p>Да, я активно работаю онлайн через Zoom и Google Meet. Качество работы при этом не уступает очным встречам. Многие клиенты выбирают именно онлайн-формат за удобство и экономию времени.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">Что такое гештальт-терапия?</button>
+                <div class="faq-answer">
+                    <p>Гештальт-терапия — это направление, которое помогает человеку осознать свои чувства, потребности и паттерны поведения. Мы работаем «здесь и сейчас», исследуем, как вы строите отношения с собой и другими, и находите новые, более здоровые способы жить.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">Вы работаете с парами?</button>
+                <div class="faq-answer">
+                    <p>В основном я работаю индивидуально. Если у вас кризис в отношениях, я могу помочь вам разобраться в своих чувствах и потребностях, а также понять, что происходит в паре. При необходимости могу порекомендовать семейного терапевта.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">Как записаться на консультацию?</button>
+                <div class="faq-answer">
+                    <p>Напишите мне в личные сообщения ВКонтакте: <a href="https://vk.ru/id213455298" target="_blank">vk.ru/id213455298</a>. В сообщении укажите удобное время для первой бесплатной встречи (30 минут). Я отвечу в течение суток.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts -->
+    <section id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты и запись</h2>
+            
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">
+                    Готова помочь вам. Первая 30-минутная встреча — бесплатно.
+                </p>
+                
+                <a href="https://vk.ru/id213455298" target="_blank" class="btn-primary" style="font-size: 1.2rem; padding: 20px 50px;">
+                    Написать в ВКонтакте
+                </a>
+                
+                <div style="margin-top: 50px; padding: 30px; background: white; border-radius: 18px; box-shadow: 0 8px 30px rgba(0,0,0,0.06);">
+                    <p><strong>Очно:</strong> г. Оса, ул. М. Горького, 93</p>
+                    <p style="margin-top: 12px;"><strong>Онлайн:</strong> Zoom, Google Meet</p>
+                    <p style="margin-top: 20px; color: var(--text-light);">Пишите в любое удобное время. Отвечу в течение суток.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ /* Адаптация под смартфоны */
+    @media (max-width: 960px) {
+      .nav-links { display: none; } /* на совсем маленьких экранах можно скрыть меню или позже добавить бургер */
+      .hero-grid, .about-grid, .when-grid { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+      .about-photo { text-align: center; }
+      .hero h1 { font-size: 2.6rem; line-height: 1.15; }
+      .hero p { font-size: 1.1rem; }
+      .btn { padding: 14px 30px; font-size: 1rem; width: 100%; text-align: center; }
+      section h2 { font-size: 2rem; }
+      .text-card { padding: 24px; }
+      .flags-list li { padding: 12px 0; font-size: 0.95rem; }
+      .price-card { padding: 30px 18px; }
+      .price-amount { font-size: 1.8rem; }
+      .form-input, .form-textarea { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Екатерина Зубова</h4>
+                    <p>Психолог • Гештальт-терапевт</p>
+                    <p>Член профессионального сообщества</p>
+                    <p>Работаю в соответствии с этическим кодексом</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <a href="https://vk.ru/id213455298" target="_blank">ВКонтакте</a>
+                    <p>г. Оса, ул. М. Горького, 93</p>
+                    <p>Онлайн по всей России</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <p>Полная конфиденциальность</p>
+                    <p>Профессиональная этика</p>
+                    <p>Супервизии и личная терапия</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                © 2026 Екатерина Зубова. Все права защищены.<br>
+                Сайт носит информационный характер и не является публичной офертой.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+                
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Drag scroll for certificates and reviews
+        function enableDragScroll(selector) {
+            const container = document.querySelector(selector);
+            if (!container) return;
+            
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            container.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+                container.style.cursor = 'grabbing';
+            });
+            
+            container.addEventListener('mouseleave', () => {
+                isDown = false;
+                container.style.cursor = 'grab';
+            });
+            
+            container.addEventListener('mouseup', () => {
+                isDown = false;
+                container.style.cursor = 'grab';
+            });
+            
+            container.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX) * 2;
+                container.scrollLeft = scrollLeft - walk;
+            });
+            
+            // Touch support
+            container.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+            });
+            
+            container.addEventListener('touchmove', (e) => {
+                const x = e.touches[0].pageX - container.offsetLeft;
+                const walk = (x - startX) * 2;
+                container.scrollLeft = scrollLeft - walk;
+            });
+        }
+        
+        enableDragScroll('.cert-scroll');
+        enableDragScroll('.reviews-scroll');
+        
+        console.log('%c[Лендинг] Екатерина Зубова — готово (фон hero: bx8vsfufm9vkpqh6833oh098)', 'color:#8B5A4B');
+    </script>
+</body>
+</html>
